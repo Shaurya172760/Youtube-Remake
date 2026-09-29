@@ -1,0 +1,124 @@
+.video-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 25px;
+}
+@media (max-width: 400px) {
+  .video-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 401px) and (max-width: 700px) {
+  .video-preview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .video-preview-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-preview {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* video preview layout */
+.thumbnail-div {
+  position: relative;
+}
+.thumbnail {
+  width: 100%;
+}
+.video-time {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  background-color: black;
+  color: white;
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 5%;
+}
+.video-info {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+}
+
+/* video info layout */
+
+  /* channel picture styles */
+  .channel-pic {
+    display: inline-block;
+    width: 40px;
+    vertical-align: top;
+    position: relative;
+  }
+  .channel {
+    border-radius: 50%;
+    width: 100%;
+    border: none;
+  }
+  .channel-pic .channel-tooltip {
+    position: absolute;
+    top: 48px;
+    background-color: white;
+    width: 220px;
+    height: 60px;
+    box-shadow: 2px 2px 4px rgb(180, 180, 180);
+    border-radius: 5px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  .channel-pic:hover .channel-tooltip {
+    opacity: 1;
+  }
+  .channel-tooltip-pic {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+  }
+  .channel-info {
+    width: 180px;
+    font-family: Roboto, Arial;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .channel-info p {
+    margin-top: 5px;
+    color: rgb(116, 116, 116);
+    font-size: 14px;
+  }
+
+  /* video info text */
+  .video-title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 2px;
+    margin-top: 0;
+    font-family: Roborto, Arial, sans-serif;
+  }
+  .video-author {
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .video-stats {
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    margin-top: 0;
+  }
